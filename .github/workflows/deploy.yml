@@ -25,5 +25,6 @@ jobs:
         with:
           status: ${{ job.status }}
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # required, but GitHub should automatically supply
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
         if: always()                                          # Pick up events even if the job fails or is canceled.
