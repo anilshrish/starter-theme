@@ -21,7 +21,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: sonots/slack-notice-action@v3
-      - name: SlackNotify
         with:
           status: ${{ job.status }}
         env:
