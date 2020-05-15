@@ -17,6 +17,7 @@ jobs:
           SHOPIFY_THEME_ID: ${{ secrets.SHOPIFY_THEME_ID }}
           THEME_PATH: ${{ secrets.THEME_PATH }}
   slack:
+    needs: [shopify]
     name: slackNotify
     runs-on: ubuntu-latest
     steps:
